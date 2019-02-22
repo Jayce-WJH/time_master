@@ -1,0 +1,10 @@
+<view class="container">
+  <view class="logs" wx:if="{{ logs.length }}">
+     <view class="item" wx:for="{{ logs }}" wx:key="{{ index }}">
+       <text class="name">任务名称: {{ item.name }}</text>
+       <text class="action">{{ item.action }}</text>
+       <text class="timestamp">[{{ item.timestamp }}]</text>
+     </view>
+     <button bindtap='clearToDolist' class='clear_btn' size='mini'>清空日志</button>
+  </view>
+</view>

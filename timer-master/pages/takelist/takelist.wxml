@@ -1,0 +1,27 @@
+<view class="container">
+  <view class="header">
+    <image class="plus" src="../../assets/plus.png"/>
+    <input class="new-todo" value="{{ input }}" placeholder="点击添加..." auto-focus bindinput="inputChangeHandle" bindconfirm="addTodoHandle"/>
+  </view>
+  <block wx:if="{{ todos.length }}">
+    <view class="todos">
+      <!-- 列表项应该在标记为已完成时获得类“completed” -->
+      <view class="item{{ item.completed ? ' completed' : '' }}" wx:for="{{ todos }}" wx:key="{{ index }}" bindtap="toggleTodoHandle" data-index="{{ index }}">
+        <!-- 完成：success，todo:circle -->
+        <icon class="checkbox" type="{{ item.completed ? 'success' : 'circle' }}"/>
+        <text class="name">{{ item.name }}</text>
+        <icon class="remove" type="clear" size="16" catchtap="removeTodoHandle" data-index="{{ index }}"/>
+      </view>
+    </view>
+    <view class="footer">
+      <text class="btn" bindtap="toggleAllHandle">全选</text>
+      <text wx:if="{{ leftCount }}">{{ leftCount }} {{ leftCount === 1 ? '项' : '项' }} 剩余</text>
+      <text class="btn" wx:if="{{ todos.length > leftCount }}" bindtap="clearCompletedHandle">清除想法</text>
+    </view>
+  </block>
+  <block wx:else>
+    <view class="empty">
+      <text class="title">快来添加你的小想法</text>
+    </view>
+  </block>
+</view>

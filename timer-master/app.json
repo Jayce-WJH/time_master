@@ -1,0 +1,54 @@
+{
+  "pages": [
+    "pages/register/register",
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/setting/setting",
+    "pages/takelist/takelist",
+    "pages/todo_logs/todo_logs",
+    "pages/chat/chat",
+    "pages/index1/index1",
+    "pages/add/add",
+    "pages/week/week",
+    "pages/music/music",
+    "pages/index3/index3"
+  ],
+
+
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#3197ed",
+    "navigationBarTitleText": "",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "#dddddd",
+    "selectedColor": "#3cc51f",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "list": [{
+      "pagePath": "pages/index/index",
+      "iconPath": "image/zy1.png",
+      "selectedIconPath": "image/zy2.png",
+      "text": "主页"
+    }, {
+      "pagePath": "pages/index1/index1",
+      "iconPath": "image/record1.png",
+      "selectedIconPath": "image/record2.png",
+      "text": "任务"
+    },{
+      "pagePath": "pages/music/music",
+      "iconPath": "image/music1.png",
+      "selectedIconPath": "image/music2.png",
+      "text": "白噪音"
+    } ,{
+      "pagePath": "pages/setting/setting",
+      "iconPath": "image/solution.png",
+      "selectedIconPath": "image/solution1.png",
+      "text": "用户中心"
+    }
+    ]
+  },
+  "debug": true,
+  "component": true
+}

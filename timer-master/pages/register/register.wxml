@@ -1,0 +1,9 @@
+   <!--pages/index/index.wxml-->
+<view class='islogin'>
+  <image class='brand' mode='aspectFit' src='/image/brand.png'></image>
+  <text class='name'>时光流水</text>
+  <text class='motto'>烂漫时光  爱上生活 </text>
+  <text class='motto1'>做更好的自己</text>
+  <text class='motto-english'>Enjoy Your Life</text>
+  <button class='login' bindtap="TZ">点击进入</button>
+</view>
